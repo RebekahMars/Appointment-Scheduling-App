@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="835.0" prefWidth="1073.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenJFXController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="835.0" prefWidth="1290.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="appointmentInformationTable" layoutX="186.0" layoutY="108.0" prefHeight="268.0" prefWidth="1080.0">
+               <columns>
+                  <TableColumn fx:id="appointmentIDColumn" prefWidth="100.0" text="Appointment ID" />
+                  <TableColumn fx:id="appointmentTitleColumn" prefWidth="120.0" text="Title" />
+                  <TableColumn fx:id="appointmentDescriptionColumn" prefWidth="120.0" text="Description" />
+                  <TableColumn fx:id="appointmentLocationColumn" prefWidth="120.0" text="Location" />
+                  <TableColumn fx:id="appointmentContactColumn" prefWidth="100.0" text="Contact" />
+                  <TableColumn fx:id="appointmentTypeColumn" prefWidth="120.0" text="Type" />
+                  <TableColumn fx:id="appointmentStartColumn" prefWidth="150.0" text="Start Date/Time" />
+                  <TableColumn fx:id="appointmentEndColumn" prefWidth="150.0" text="End Date/Time" />
+                  <TableColumn fx:id="appointmentCustomerIDColumn" prefWidth="100.0" text="Customer ID" />
+               </columns>
+            </TableView>
+            <TableView fx:id="customerInformationTable" layoutX="186.0" layoutY="468.0" prefHeight="268.0" prefWidth="1080.0">
+               <columns>
+                  <TableColumn fx:id="customerIDColumn" prefWidth="215.0" text="Customer ID" />
+                  <TableColumn fx:id="customerNameColumn" prefWidth="215.0" text="Customer Name" />
+                  <TableColumn fx:id="customerAddressColumn" prefWidth="215.0" text="Customer Address" />
+                  <TableColumn fx:id="customerPostalCodeColumn" prefWidth="215.0" text="Customer Postal Code" />
+                  <TableColumn fx:id="customerPhoneNumberColumn" prefWidth="218.39990234375" text="Customer Phone Number" />
+               </columns>
+            </TableView>
+            <ButtonBar buttonMinWidth="50.0" layoutX="537.0" layoutY="376.0" prefHeight="40.0" prefWidth="378.0">
+               <buttons>
+                  <Button fx:id="addAppointmentButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addAppointmentScreen" text="ADD" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="modifyAppointmentButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#modifyAppointmentScreen" text="MODIFY" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteAppointmentButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteAppointment" prefHeight="26.0" prefWidth="79.0" text="DELETE" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </buttons>
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+            </ButtonBar>
+            <ButtonBar buttonMinWidth="50.0" layoutX="537.0" layoutY="736.0" prefHeight="40.0" prefWidth="378.0">
+               <buttons>
+                  <Button fx:id="addCustomerButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addCustomerScreen" text="ADD" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="modifyCustomerButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#modifyCustomerScreen" text="MODIFY" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteCustomerButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="26.0" prefWidth="79.0" text="DELETE" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </buttons>
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+            </ButtonBar>
+            <ButtonBar buttonMinWidth="50.0" layoutX="1093.0" layoutY="778.0" prefHeight="40.0" prefWidth="186.0">
+               <buttons>
+                  <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#exitApplication" prefHeight="26.0" prefWidth="79.0" text="LOG OUT" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </buttons>
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+            </ButtonBar>
+            <Pane layoutY="108.0" prefHeight="268.0" prefWidth="186.0">
+               <children>
+                  <Button fx:id="weeklyAppointmentsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="112.0" mnemonicParsing="false" onAction="#showWeeklyAppointments" prefHeight="57.0" prefWidth="159.0" text="Weekly Appointments" />
+                  <Button fx:id="monthlyAppointmentsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="197.0" mnemonicParsing="false" onAction="#showMonthlyAppointments" prefHeight="57.0" prefWidth="159.0" text="Monthly Appointments" />
+                  <Button fx:id="allAppointmentsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="32.0" mnemonicParsing="false" onAction="#showAllAppointments" prefHeight="57.0" prefWidth="159.0" text="All Appointments" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-4.0" prefHeight="26.0" prefWidth="186.0" text="Appointments">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutY="468.0" prefHeight="268.0" prefWidth="186.0">
+               <children>
+                  <Button fx:id="customerAppointmentsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="32.0" mnemonicParsing="false" onAction="#customerAppointmentsScreen" prefHeight="57.0" prefWidth="159.0" text="Customer Appointments" />
+                  <Button fx:id="contactScheduleButton" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="115.0" mnemonicParsing="false" onAction="#contactScheduleScreen" prefHeight="57.0" prefWidth="159.0" text="Contact Schedule" />
+                  <Button fx:id="contactAppointmentsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="197.0" mnemonicParsing="false" onAction="#contactAppointmentsScreen" prefHeight="57.0" prefWidth="159.0" text="Contact Appointments" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="-3.0" prefHeight="26.0" prefWidth="186.0" text="Reports">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label contentDisplay="CENTER" layoutX="186.0" layoutY="54.0" prefHeight="35.0" prefWidth="1080.0" text="Appointment Information">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="186.0" layoutY="416.0" prefHeight="35.0" prefWidth="1080.0" text="Customer Information">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" prefHeight="57.0" prefWidth="1280.0" text="Appointment Scheduler">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Separator layoutY="64.0" prefHeight="1.0" prefWidth="1290.0" />
+            <Separator layoutY="416.0" prefWidth="1290.0" />
+            <Separator layoutY="775.0" prefWidth="1290.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

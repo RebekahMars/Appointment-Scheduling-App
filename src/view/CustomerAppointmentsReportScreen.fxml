@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="835.0" prefWidth="1290.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerAppointmentsReportScreenController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" prefHeight="57.0" prefWidth="1280.0" text="Customer Appointments Report">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Label>
+      <Separator layoutY="65.0" prefHeight="1.0" prefWidth="1290.0" />
+      <Separator layoutX="227.0" layoutY="64.0" orientation="VERTICAL" prefHeight="686.0" prefWidth="6.0" />
+      <Separator layoutX="1110.0" layoutY="64.0" orientation="VERTICAL" prefHeight="686.0" prefWidth="6.0" />
+      <ButtonBar buttonMinWidth="50.0" layoutX="826.0" layoutY="757.0" prefHeight="58.0" prefWidth="282.0">
+         <buttons>
+            <Button fx:id="cancelButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#exitMainMenu" prefHeight="40.0" prefWidth="80.0" text="EXIT" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </buttons>
+         <padding>
+            <Insets left="50.0" right="50.0" />
+         </padding>
+      </ButtonBar>
+      <Separator layoutY="754.0" prefHeight="1.0" prefWidth="1290.0" />
+      <HBox layoutX="227.0" layoutY="68.0" prefHeight="66.0" prefWidth="883.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="282.0" text="APPOINTMENT MONTH" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="appointmentMonthDrop" prefHeight="40.0" prefWidth="564.0" />
+         </children>
+      </HBox>
+      <TableView fx:id="customerAppointmentsTable" layoutX="395.0" layoutY="168.0" prefHeight="500.0" prefWidth="500.0">
+         <columns>
+            <TableColumn fx:id="appointmentTypeColumn" prefWidth="250.0" text="Appointment Type" />
+            <TableColumn fx:id="appointmentTotalColumn" prefWidth="250.0" text="Total Appointments Scheduled" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
